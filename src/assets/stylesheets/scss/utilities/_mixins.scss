@@ -1,0 +1,21 @@
+@mixin ball-gradient($size) {
+  content: '';
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+}
+
+@mixin custom-glass($width, $height) {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: $width;
+  height: $height;
+  display: block;
+  z-index: 10;
+  position: absolute;
+}

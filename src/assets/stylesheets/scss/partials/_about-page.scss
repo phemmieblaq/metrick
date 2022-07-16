@@ -1,0 +1,136 @@
+@use '../utilities/mixins' as mix;
+
+.about-page {
+  background-image: url(../../images/Path\ 1.svg);
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+  .main-top {
+    // padding-top: 100px;
+    .glass-bg-1 {
+      @include mix.custom-glass(60%, 525px);
+      top: 125px;
+      left: 0;
+    }
+    .behind-content-1 {
+      width: 250px;
+      height: 350px;
+      background-image: linear-gradient(
+        to bottom,
+        var(--purple-light),
+        var(--purple-deep_a)
+      );
+      position: absolute;
+      top: 205px;
+      left: 470px;
+      z-index: 1;
+    }
+
+    // main content
+
+    .page-intro {
+      padding: 200px 50px 50px 400px;
+      position: relative;
+      z-index: 100;
+      margin-bottom: 100px;
+      &:after {
+        @include mix.ball-gradient(120px);
+        background-image: linear-gradient(
+          var(--blue-deep),
+          var(--purple-deep_a)
+        );
+        top: 150px;
+        right: 0;
+      }
+      .about {
+        &:before {
+          content: '';
+          display: inline-block;
+          margin-right: 5px;
+          width: 50px;
+          height: 1px;
+          background-color: white;
+          transform: translateY(-5px);
+        }
+      }
+      h1 {
+        padding-left: 100px;
+        font-size: 50px;
+      }
+      .detail-text-1 {
+        width: 40%;
+        margin: 95px 100px 0 auto;
+        // font-size: 13px;
+      }
+    }
+  }
+
+  .details-section {
+    padding-top: 50px;
+    .glass-bg-2 {
+      @include mix.custom-glass(53%, 490px);
+      top: 1050px;
+      right: 0;
+    }
+    .behind-content-2 {
+      width: 250px;
+      height: 300px;
+      background-image: linear-gradient(
+        to bottom,
+        var(--blue-deep),
+        var(--purple-deep_b)
+      );
+      position: absolute;
+      top: 1160px;
+      right: 290px;
+      z-index: 1;
+    }
+    .main-details-section {
+      position: relative;
+      z-index: 100;
+      margin-top: 150px;
+      .col-lg-6 {
+        p {
+          line-height: 30px;
+        }
+      }
+      .detail-header-1 {
+        &:before {
+          content: '';
+          display: inline-block;
+          background-color: white;
+          width: 70px;
+          height: 1px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .question-request-section {
+    margin-bottom: 65px;
+    .behind-content-3 {
+      width: 300px;
+      height: 120px;
+      background-image: linear-gradient(
+        to bottom,
+        var(--brown),
+        var(--purple-deep_b)
+      );
+      position: absolute;
+      bottom: 285px;
+      right: 80px;
+      z-index: 1;
+    }
+    .main-question-request-section {
+      position: relative;
+      z-index: 100;
+      margin-top: 200px;
+      min-height: 200px;
+      padding: 60px;
+      background: rgba(127, 30, 123, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  }
+}
